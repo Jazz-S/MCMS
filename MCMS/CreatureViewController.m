@@ -7,8 +7,16 @@
 //
 
 #import "CreatureViewController.h"
+#import "CreatureListViewController.h"
 
 @interface CreatureViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *editButton;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *detailsLabel;
+
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *detailsTextField;
+
 
 @end
 
@@ -17,21 +25,40 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.title = self.selectedCreature.fullName;
+    self.nameLabel.text = self.selectedCreature.fullName;
+    [self.nameTextField setHidden:true];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)editButtonPressed:(UIButton *)sender
+{
+    
+    
+    if (self.editing)
+    {
+        self.editing = false;
+        [self.nameTextField setHidden:true];
+        [self.detailsTextField setHidden:true];
+        [sender setTitle:@"Edit" forState:UIControlStateNormal];
+        self.selectedCreature.fullName = self.nameTextField.text;
+        self.selectedCreature.fullName = self.detailsTextField.text;
+        self.nameLabel.text = self.selectedCreature.fullName;
+        self.detailsLabel.text = self.selectedCreature.details;
+    }
+    else
+    {
+        self.editing = true;
+        [self.nameTextField setHidden:false];
+        [self.detailsTextField setHidden:false];
+        [sender setTitle:@"Done" forState:UIControlStateNormal];
+    }
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+
+
+
+
 
 @end

@@ -12,11 +12,11 @@
 
 
 
--(instancetype)initWithName:(NSString *)name
+-(instancetype)initWithName:(NSString *)name withDetails:(NSString *)details
 {
     self =[super init];
     self.fullName = name;
-
+    self.details = details;
     return self;
 }
 
