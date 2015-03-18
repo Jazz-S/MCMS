@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E10805FB1AB8F4B000E42BC3 /* CreatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E10805FA1AB8F4B000E42BC3 /* CreatureViewController.m */; };
 		E18A2F7E1AB8E5C000D4CD23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E18A2F7D1AB8E5C000D4CD23 /* main.m */; };
 		E18A2F811AB8E5C000D4CD23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E18A2F801AB8E5C000D4CD23 /* AppDelegate.m */; };
 		E18A2F841AB8E5C000D4CD23 /* CreatureListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E18A2F831AB8E5C000D4CD23 /* CreatureListViewController.m */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E10805F91AB8F4B000E42BC3 /* CreatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatureViewController.h; sourceTree = "<group>"; };
+		E10805FA1AB8F4B000E42BC3 /* CreatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatureViewController.m; sourceTree = "<group>"; };
 		E18A2F781AB8E5C000D4CD23 /* MCMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E18A2F7C1AB8E5C000D4CD23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E18A2F7D1AB8E5C000D4CD23 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -91,6 +94,8 @@
 				E18A2F821AB8E5C000D4CD23 /* CreatureListViewController.h */,
 				E18A2F831AB8E5C000D4CD23 /* CreatureListViewController.m */,
 				E18A2F851AB8E5C000D4CD23 /* Main.storyboard */,
+				E10805F91AB8F4B000E42BC3 /* CreatureViewController.h */,
+				E10805FA1AB8F4B000E42BC3 /* CreatureViewController.m */,
 				E18A2F881AB8E5C000D4CD23 /* Images.xcassets */,
 				E18A2F8A1AB8E5C000D4CD23 /* LaunchScreen.xib */,
 				E18A2F7B1AB8E5C000D4CD23 /* Supporting Files */,
@@ -227,6 +232,7 @@
 				E18A2F841AB8E5C000D4CD23 /* CreatureListViewController.m in Sources */,
 				E18A2FA31AB8E5E200D4CD23 /* MagicalCreature.m in Sources */,
 				E18A2F811AB8E5C000D4CD23 /* AppDelegate.m in Sources */,
+				E10805FB1AB8F4B000E42BC3 /* CreatureViewController.m in Sources */,
 				E18A2F7E1AB8E5C000D4CD23 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +426,7 @@
 				E18A2F9D1AB8E5C000D4CD23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E18A2F9E1AB8E5C000D4CD23 /* Build configuration list for PBXNativeTarget "MCMSTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +435,7 @@
 				E18A2FA01AB8E5C000D4CD23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

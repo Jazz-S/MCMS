@@ -8,6 +8,8 @@
 
 #import "CreatureListViewController.h"
 #import "MagicalCreature.h"
+#import "CreatureViewController.h"
+
 @interface CreatureListViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UITextField *creatureTextField;
@@ -49,6 +51,14 @@
     [self.tableView reloadData];
     [self.creatureTextField resignFirstResponder];
     self.creatureTextField.text= @"";
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    CreatureViewController *creatureVC = segue.destinationViewController;
+    NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
+    MagicalCreature *theSelectedCreature = [self.creatures objectAtIndex:selectedIndexPath.row];
+    creatureVC.
 }
 
 @end
