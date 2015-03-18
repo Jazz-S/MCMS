@@ -29,6 +29,7 @@
     self.title = self.selectedCreature.fullName;
     self.nameLabel.text = self.selectedCreature.fullName;
     [self.nameTextField setHidden:true];
+    [self.detailsTextField setHidden:true];
 }
 
 - (IBAction)editButtonPressed:(UIButton *)sender
@@ -38,11 +39,9 @@
     if (self.editing)
     {
         self.editing = false;
-        [self.nameTextField setHidden:true];
-        [self.detailsTextField setHidden:true];
         [sender setTitle:@"Edit" forState:UIControlStateNormal];
         self.selectedCreature.fullName = self.nameTextField.text;
-        self.selectedCreature.fullName = self.detailsTextField.text;
+        self.selectedCreature.details = self.detailsTextField.text;
         self.nameLabel.text = self.selectedCreature.fullName;
         self.detailsLabel.text = self.selectedCreature.details;
     }
